@@ -1,0 +1,224 @@
+:root {
+    --amber: #FFD700;
+    --dark-primary: #1E2E3F;
+    --bg-dark: #2C273E;
+    --text-muted: #888;
+}
+
+body {
+    background-color: var(--bg-dark);
+    background-image: url('../asset/transisi_texture/Gradient_biru.png');
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: center top;
+    color: white;
+    position: relative;
+    min-height: 100vh;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../asset/transisi_texture/texture.png');
+    background-size: 140% auto;
+    background-repeat: repeat;
+    background-position: right top;
+    opacity: 0.3;
+    mix-blend-mode: overlay;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.success-wrapper {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 20px 50px;
+}
+
+.success-container {
+    width: 100%;
+    max-width: 550px;
+    background: #1E2E3F;
+
+
+    border: 1px solid var(--amber);
+
+    border-radius: 24px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+    animation: popUp 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes popUp {
+    0% {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+
+.success-container::before {
+    display: none;
+}
+
+.success-header,
+.receipt-card,
+.success-actions {
+    position: relative;
+    z-index: 1;
+}
+
+.success-icon-large {
+    width: 90px;
+    height: 90px;
+    background: linear-gradient(135deg, #FFD700 0%, #FDB931 100%);
+    color: #1e2e3f;
+    font-size: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+    box-shadow: 0 10px 20px rgba(255, 215, 0, 0.3);
+    border: 4px solid rgba(255, 255, 255, 0.1);
+}
+
+.success-title {
+    font-size: 2rem;
+    font-weight: 800;
+    color: white;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.success-subtitle {
+    font-size: 1rem;
+    color: #B0B0B0;
+    margin-bottom: 35px;
+}
+
+
+.receipt-card {
+    background: #15202b;
+
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 30px;
+    border: 1px dashed rgba(255, 255, 255, 0.15);
+    text-align: left;
+
+}
+
+.receipt-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.receipt-header span {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: #888;
+    letter-spacing: 1px;
+}
+
+.receipt-header code {
+    font-size: 1.1rem;
+    font-family: 'Courier New', monospace;
+    color: var(--amber);
+    font-weight: 700;
+}
+
+.receipt-divider {
+    height: 1px;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 15px 0;
+}
+
+.receipt-items-list {
+    margin-bottom: 15px;
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+.receipt-item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+    color: #ddd;
+}
+
+.receipt-item span:first-child {
+    font-weight: 600;
+}
+
+.receipt-total {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: white;
+    margin-top: 10px;
+}
+
+.receipt-total span:last-child {
+    color: var(--amber);
+}
+
+
+.success-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.btn-primary-success {
+    background: var(--amber);
+    color: #1a1a1a;
+    padding: 14px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.btn-primary-success:hover {
+    transform: translateY(-2px);
+    background: #FFED4B;
+    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
+}
+
+.btn-secondary-success {
+    background: transparent;
+    color: white;
+    padding: 12px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.2s;
+}
+
+.btn-secondary-success:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: white;
+}

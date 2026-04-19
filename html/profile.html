@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile - GameStore</title>
+
+    <link rel="icon" href="../asset/logo.png" type="image/png">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/catalog.css">
+    <link rel="stylesheet" href="../css/profile.css">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&family=Montserrat:wght@400;500;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="page-catalog">
+
+
+    <nav class="glass-nav">
+        <div class="nav-logo" onclick="window.location.href='index.html'">
+            <img src="../asset/logo.png" alt="Aether Logo" style="height: 48px; width: auto;">
+            <span>Aether</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="catalog.html">Store</a></li>
+            <li><a href="library.html">Library</a></li>
+            <li><a href="index.html#news">News</a></li>
+            <li><a href="#footer">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+
+            <button id="btnMobileMenu" class="nav-btn mobile-menu-btn" aria-label="Menu" style="display: none;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+
+
+            <button class="nav-btn wishlist-btn" aria-label="Wishlist" onclick="window.location.href='wishlist.html'">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path
+                        d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                    </path>
+                </svg>
+            </button>
+
+
+            <button id="btnLogin" class="nav-btn" aria-label="Login" onclick="window.location.href='profile.html'">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+            </button>
+
+
+            <button class="nav-btn cart-btn" aria-label="Cart">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="9" cy="21" r="1" />
+                    <circle cx="20" cy="21" r="1" />
+                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
+                </svg>
+                <span class="badgemart">0</span>
+            </button>
+        </div>
+    </nav>
+
+
+    <header class="catalog-hero profile-hero">
+        <div class="catalog-hero-overlay"></div>
+        <div class="catalog-hero-content">
+            <h1 class="catalog-title">MY PROFILE</h1>
+            <p class="catalog-subtitle">Manage your account and view your journey</p>
+        </div>
+    </header>
+
+
+    <div class="hero-bottom-edge"></div>
+
+
+    <main class="profile-layout">
+
+
+        <div class="user-header">
+            <div class="user-avatar" id="profileAvatar">U</div>
+            <div class="user-info">
+                <h2 id="profileUsername">Loading...</h2>
+                <p id="profileJoinDate">Member since...</p>
+            </div>
+        </div>
+
+
+        <div class="profile-tabs">
+            <button class="tab-btn active" data-tab="tabOverview">Overview</button>
+            <button class="tab-btn" data-tab="tabOrders">Order History</button>
+            <button class="tab-btn" data-tab="tabSettings">Settings</button>
+        </div>
+
+
+        <section id="tabOverview" class="tab-content active">
+            <div class="overview-stats">
+
+                <div class="stat-card">
+                    <div class="stat-value" id="statGames">0</div>
+                    <div class="stat-label">Games Owned</div>
+                    <div class="stat-icon">🎮</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-value" id="statHours">0h</div>
+                    <div class="stat-label">Total Playtime</div>
+                    <div class="stat-icon">⏳</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-value" id="statLevel">1</div>
+                    <div class="stat-label">Account Level</div>
+                    <div class="stat-icon">⭐</div>
+                </div>
+            </div>
+
+
+            <div class="recent-activity">
+                <h3>Recent Activity</h3>
+                <p style="color: #ccc;">No recent activity recorded.</p>
+
+            </div>
+        </section>
+
+
+        <section id="tabOrders" class="tab-content">
+            <div class="orders-list" id="ordersList">
+
+            </div>
+        </section>
+
+
+        <section id="tabSettings" class="tab-content">
+            <div class="settings-container">
+                <form id="settingsForm">
+                    <div class="settings-group">
+                        <h3>Public Profile</h3>
+                        <div class="form-group">
+                            <label for="inputUsername">Username</label>
+                            <input type="text" id="inputUsername" class="form-input" placeholder="Your username">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputBio">Bio</label>
+                            <textarea id="inputBio" class="form-input" rows="3"
+                                placeholder="Tell us about yourself"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="settings-group">
+                        <h3>Account Security</h3>
+                        <div class="form-group">
+                            <label for="inputEmail">Email Address</label>
+                            <input type="email" id="inputEmail" class="form-input" placeholder="name@example.com"
+                                disabled style="opacity: 0.7; cursor: not-allowed;">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputPassword">New Password</label>
+                            <input type="password" id="inputPassword" class="form-input"
+                                placeholder="Leave blank to keep current">
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-save">Save Changes</button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+
+    <footer id="footer">
+
+        <div class="footer-top-edge"></div>
+
+        <div class="footer-container">
+
+            <div class="footer-col footer-brand-col">
+                <p class="footer-text-bold">New releases, updates, con announcements, and more!</p>
+                <h3 class="footer-sub-title">Subscribe For Updates</h3>
+
+                <form class="footer-sub-form">
+                    <input type="email" placeholder="" class="footer-input">
+                    <button type="submit" class="footer-btn-arrow">&#8594;</button>
+                </form>
+
+                <div class="made-by">
+                    <span>Made By <a href="#" class="maker-link">syans</a>.</span>
+                </div>
+            </div>
+
+
+            <div class="footer-col">
+                <h4 class="footer-heading">Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">News</a></li>
+                    <li><a href="#">Shop</a></li>
+                </ul>
+            </div>
+
+
+            <div class="footer-col">
+                <h4 class="footer-heading">Support</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Login</a></li>
+                    <li><a href="#">Sign Up</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+
+
+            <div class="footer-col">
+                <h4 class="footer-heading">Legal</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Return Policy</a></li>
+                    <li><a href="#">Shipping Policy</a></li>
+                    <li><a href="#">Sales Policy</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                </ul>
+            </div>
+        </div>
+
+
+        <button id="backToTop" class="btn-back-to-top" aria-label="Back to Top">
+            &#8593;
+        </button>
+    </footer>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="../js/auth_config.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="../js/cart.js"></script>
+    <script src="../js/profile.js"></script>
+</body>
+
+</html>

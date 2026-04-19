@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | GameStore</title>
+    <link rel="icon" href="../asset/logo.png" type="image/png">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/home.css">
+
+    <link rel="stylesheet" href="../css/cart.css">
+    <link rel="stylesheet" href="../css/loader.css">
+
+    <link rel="stylesheet" href="../css/checkout.css">
+</head>
+
+<body>
+
+
+    <nav class="glass-nav">
+        <div class="nav-logo" onclick="window.location.href='index.html'">
+            <img src="../asset/logo.png" alt="Aether Logo" style="height: 48px; width: auto;">
+            <span>Aether</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Back to Home</a></li>
+        </ul>
+    </nav>
+
+
+    <div class="checkout-container">
+
+
+        <div class="checkout-main">
+
+            <form id="checkout-form">
+
+                <div class="checkout-section">
+                    <h2 class="section-title">1. Contact Information</h2>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" class="form-control" placeholder="you@example.com" required>
+                    </div>
+                </div>
+
+
+                <div class="checkout-section">
+                    <h2 class="section-title">2. Billing Details</h2>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="fname">First Name</label>
+                            <input type="text" id="fname" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lname">Last Name</label>
+                            <input type="text" id="lname" class="form-control" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="street">Street Address</label>
+                        <input type="text" id="street" class="form-control" placeholder="123 Gaming St" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="city">City / State</label>
+                            <input type="text" id="city" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="zip">Postal Code</label>
+                            <input type="text" id="zip" class="form-control" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="country">Country</label>
+                        <select id="country" class="form-control">
+                            <option value="ID">Indonesia</option>
+                            <option value="SG">Singapore</option>
+                            <option value="US">United States</option>
+                        </select>
+                    </div>
+                </div>
+
+
+                <div class="checkout-section">
+                    <h2 class="section-title">3. Payment Method</h2>
+
+                    <div class="payment-methods">
+
+                        <div class="payment-method-card active" data-method="card">
+                            <div class="payment-icon">💳</div>
+                            <span>Credit / Debit Card</span>
+                        </div>
+
+                        <div class="payment-method-card" data-method="qris">
+                            <div class="payment-icon">📱</div>
+                            <span>QRIS / E-Wallet</span>
+                        </div>
+                    </div>
+
+
+                    <div id="form-card" class="payment-form-container active">
+                        <div class="form-group">
+                            <label>Card Number</label>
+                            <input type="text" class="form-control" placeholder="0000 0000 0000 0000" maxlength="19">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Expiry</label>
+                                <input type="text" class="form-control" placeholder="MM/YY" maxlength="5">
+                            </div>
+                            <div class="form-group">
+                                <label>CVC</label>
+                                <input type="text" class="form-control" placeholder="123" maxlength="3">
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div id="form-qris" class="payment-form-container">
+                        <div
+                            style="text-align: center; padding: 20px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                            <p style="margin-bottom: 10px; color: #ccc;">Scan QR Code after clicking Place Order</p>
+                            <div
+                                style="width: 150px; height: 150px; background: white; margin: 0 auto; display: flex; align-items: center; justify-content: center; color: black; font-weight: bold;">
+                                [QR CODE]
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="secure-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <rect width="18" height="11" x="3" y="11" rx="2" ry="2" />
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                        </svg>
+                        <span>Payments are secure and encrypted (Simulated)</span>
+                    </div>
+
+                </div>
+
+
+            </form>
+
+        </div>
+
+
+        <aside class="checkout-summary">
+            <div class="summary-card">
+                <h3 class="section-title" style="font-size: 1.2rem; border-bottom: none;">Order Summary</h3>
+
+                <div id="order-summary-items" class="summary-items">
+
+                </div>
+
+                <div class="summary-totals">
+                    <div class="total-row">
+                        <span>Subtotal</span>
+                        <span id="summary-subtotal">Rp 0</span>
+                    </div>
+
+                    <div class="total-row final">
+                        <span>TOTAL</span>
+                        <span id="summary-total">Rp 0</span>
+                    </div>
+                </div>
+
+
+                <button type="submit" form="checkout-form" id="btn-place-order" class="btn-place-order">
+                    <span class="btn-text">PLACE ORDER</span>
+                    <span class="spinner"></span>
+                </button>
+            </div>
+        </aside>
+
+    </div>
+
+
+    <footer id="footer">
+
+        <div class="footer-top-edge"></div>
+
+        <div class="footer-container">
+
+            <div class="footer-col footer-brand-col">
+                <p class="footer-text-bold">New releases, updates, con announcements, and more!</p>
+                <h3 class="footer-sub-title">Subscribe For Updates</h3>
+
+                <form class="footer-sub-form">
+                    <input type="email" placeholder="" class="footer-input">
+                    <button type="submit" class="footer-btn-arrow">&#8594;</button>
+                </form>
+
+                <div class="made-by">
+                    <span>Made By <a href="#" class="maker-link">syans</a>.</span>
+                </div>
+            </div>
+
+
+            <div class="footer-col">
+                <h4 class="footer-heading">Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">News</a></li>
+                    <li><a href="#">Shop</a></li>
+                </ul>
+            </div>
+
+
+            <div class="footer-col">
+                <h4 class="footer-heading">Support</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Login</a></li>
+                    <li><a href="#">Sign Up</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+
+
+            <div class="footer-col">
+                <h4 class="footer-heading">Legal</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Return Policy</a></li>
+                    <li><a href="#">Shipping Policy</a></li>
+                    <li><a href="#">Sales Policy</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                </ul>
+            </div>
+        </div>
+
+
+        <button id="backToTop" class="btn-back-to-top" aria-label="Back to Top">
+            &#8593;
+        </button>
+    </footer>
+
+
+    <script src="../js/cart.js"></script>
+    <script src="../js/loader.js"></script>
+    <script src="../js/checkout.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+
+    <script src="../js/auth_config.js"></script>
+
+</body>
+
+</html>

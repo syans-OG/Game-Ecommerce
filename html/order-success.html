@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Success | GameStore</title>
+    <link rel="icon" href="../asset/logo.png" type="image/png">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/order-success.css">
+</head>
+
+<body>
+
+    <div class="success-wrapper">
+        <div class="success-container">
+            <div class="success-header">
+                <div class="success-icon-large">
+                    <img src="../asset/transisi_texture/sparkles.png" class="sparkle-deco" style="display:none;"
+                        onerror="this.remove()">
+                    &#10003;
+                </div>
+
+                <h1 class="success-title">PAYMENT SUCCESSFUL</h1>
+                <p class="success-subtitle">Get ready to play! Your order has been confirmed.</p>
+            </div>
+
+
+            <div class="receipt-card">
+                <div class="receipt-header">
+                    <span>Order Reference</span>
+                    <code id="order-ref-code">ORD-Simulated</code>
+                </div>
+
+                <div class="receipt-divider"></div>
+
+                <div class="receipt-body">
+                    <p class="receipt-info">A confirmation email has been sent to your inbox.</p>
+                    <p class="receipt-info">You can access your digital keys in your library.</p>
+                </div>
+            </div>
+
+            <div class="success-actions">
+
+                <a href="index.html" class="btn-primary-success"
+                    onclick="alert('Library page under construction. Redirecting to Home.')">Go to Library</a>
+                <a href="index.html" class="btn-secondary-success">Back to Home</a>
+            </div>
+        </div>
+    </div>
+
+
+    <footer id="footer">
+        <div class="footer-top-edge"></div>
+        <div class="footer-container">
+            <div class="footer-col footer-brand-col">
+                <p class="footer-text-bold">New releases, updates, con announcements, and more!</p>
+                <h3 class="footer-sub-title">Subscribe For Updates</h3>
+                <form class="footer-sub-form">
+                    <input type="email" placeholder="" class="footer-input">
+                    <button type="submit" class="footer-btn-arrow">&#8594;</button>
+                </form>
+                <div class="made-by">
+                    <span>Made By <a href="#" class="maker-link">syans</a>.</span>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-heading">Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">News</a></li>
+                    <li><a href="#">Shop</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-heading">Support</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Login</a></li>
+                    <li><a href="#">Sign Up</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-heading">Legal</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Return Policy</a></li>
+                    <li><a href="#">Shipping Policy</a></li>
+                    <li><a href="#">Sales Policy</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                </ul>
+            </div>
+        </div>
+        <button id="backToTop" class="btn-back-to-top" aria-label="Back to Top">
+            &#8593;
+        </button>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const lastOrdrStr = sessionStorage.getItem('lastOrder');
+            const refEl = document.getElementById('order-ref-code');
+
+            if (lastOrdrStr) {
+                const order = JSON.parse(lastOrdrStr);
+                refEl.textContent = order.id || 'ORD-' + Math.floor(Math.random() * 1000000);
+            } else {
+                refEl.textContent = 'ORD-' + Math.floor(Math.random() * 1000000);
+            }
+        });
+    </script>
+</body>
+
+</html>

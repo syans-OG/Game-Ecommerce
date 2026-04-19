@@ -1,0 +1,261 @@
+{
+  "admins": [
+    {
+      "id_admin": "b2f7e8a1-1234-4567-890a-bcdef1234567",
+      "username_admin": "admin",
+      "password_admin": "$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi"
+    }
+  ],
+  "games": [
+    {
+      "id_game": "a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11",
+      "nama_game": "Furry Simulator",
+      "deskripsi": "Experience the life of a furry in this immersive simulation.",
+      "harga": 90000.00,
+      "developer": "FurryDev",
+      "publisher": "IndieGames",
+      "tanggal_rilis": "2025-01-15",
+      "gambar": "asset/image_for_dummy/image_2.png",
+      "file_path": "downloads/furry_simulator.zip",
+      "id_genre": "c71f8e55-3d2f-4a0e-9c8b-5e6f7a8b9c0d"
+    },
+    {
+      "id_game": "b1ffcd88-8d1c-4fe9-aa5c-5cc8ac491b22",
+      "nama_game": "Cyber Quest",
+      "deskripsi": "A futuristic RPG set in a neon-lit metropolis.",
+      "harga": 450000.00,
+      "developer": "Neon Studios",
+      "publisher": "FutureSoft",
+      "tanggal_rilis": "2025-02-01",
+      "gambar": "asset/image_for_dummy/image_7.jpg",
+      "file_path": "downloads/cyber_quest_install.exe",
+      "id_genre": "d82abf66-2e1d-4b1f-8d9c-6d7e8b9c0d1e"
+    },
+    {
+      "id_game": "c2aade77-7e2b-4ed0-994d-4dd7ab582c33",
+      "nama_game": "Galactic Racer",
+      "deskripsi": "High-speed racing across the galaxy.",
+      "harga": 75000.00,
+      "developer": "SpeedDemon",
+      "publisher": "ArcadeX",
+      "tanggal_rilis": "2024-11-20",
+      "gambar": "asset/image_for_dummy/image_3.png",
+      "file_path": "downloads/galactic_racer.zip",
+      "id_genre": "e93db077-1f0e-4c0d-7c8b-5c6d7a8b9c0f"
+    },
+    {
+      "id_game": "d3bbef88-8f3c-5fe1-aa6d-6dd8cd581d44",
+      "nama_game": "Shadow Strike",
+      "deskripsi": "A stealth-action game where you play as a master assassin.",
+      "harga": 120000.00,
+      "developer": "ShadowWorks",
+      "publisher": "StealthCorp",
+      "tanggal_rilis": "2025-03-10",
+      "gambar": "asset/image_for_dummy/image_1.jpg",
+      "file_path": "downloads/shadow_strike.zip",
+      "id_genre": "f04ec188-0a1f-4d9e-6b7a-4b5c6d7e8f9a"
+    },
+    {
+      "id_game": "e4ccfe99-9a4d-6gf2-bb7e-7ee9de692e55",
+      "nama_game": "Kingdom of Lor",
+      "deskripsi": "An epic fantasy RPG with a vast open world.",
+      "harga": 550000.00,
+      "developer": "DragonForge",
+      "publisher": "FantasyRealms",
+      "tanggal_rilis": "2024-12-05",
+      "gambar": "asset/image_for_dummy/image_4.jpg",
+      "file_path": "downloads/kingdom_of_lor.exe",
+      "id_genre": "d82abf66-2e1d-4b1f-8d9c-6d7e8b9c0d1e"
+    },
+    {
+      "id_game": "f5ddge00-0b5e-7hg3-cc8f-8ff0ef703f66",
+      "nama_game": "Urban Brawler",
+      "deskripsi": "Street fighting action with multiplayer modes.",
+      "harga": 30000.00,
+      "developer": "StreetKing",
+      "publisher": "FighterZ",
+      "tanggal_rilis": "2025-01-25",
+      "gambar": "asset/image_for_dummy/image_5.jpg",
+      "file_path": "downloads/urban_brawler.zip",
+      "id_genre": "f04ec188-0a1f-4d9e-6b7a-4b5c6d7e8f9a"
+    },
+    {
+      "id_game": "g6eehf11-1c6f-8ih4-dd9g-9gg1fg814g77",
+      "nama_game": "Empire Builder",
+      "deskripsi": "Build and manage your own civilization from the stone age to the space age.",
+      "harga": 250000.00,
+      "developer": "CivSim",
+      "publisher": "StrategyPro",
+      "tanggal_rilis": "2024-10-15",
+      "gambar": "asset/image_for_dummy/image_6.jpg",
+      "file_path": "downloads/empire_builder.exe",
+      "id_genre": "a1b2c3d4-e5f6-7890-1234-567890abcdef"
+    },
+    {
+      "id_game": "h7ffig22-2d7g-9ji5-ee0h-0hh2gh925h88",
+      "nama_game": "Lost Ruins",
+      "deskripsi": "Explore ancient ruins and solve mysteries in this adventure game.",
+      "harga": 180000.00,
+      "developer": "MysteryLab",
+      "publisher": "AdventureTime",
+      "tanggal_rilis": "2025-04-01",
+      "gambar": "asset/image_for_dummy/image_8.png",
+      "file_path": "downloads/lost_ruins.zip",
+      "id_genre": "b2c3d4e5-f678-9012-3456-7890abcdef12"
+    },
+    {
+      "id_game": "i8ggjh33-3e8h-0kj6-ff1i-1ii3hi036i99",
+      "nama_game": "Pro League Soccer",
+      "deskripsi": "The most realistic soccer simulation ever made.",
+      "harga": 600000.00,
+      "developer": "SportsTech",
+      "publisher": "GlobalSports",
+      "tanggal_rilis": "2024-09-30",
+      "gambar": "asset/image_for_dummy/image_9.jpg",
+      "file_path": "downloads/pro_league_soccer.exe",
+      "id_genre": "c3d4e5f6-7890-1234-5678-90abcdef1234"
+    },
+    {
+      "id_game": "j9hhki44-4f9i-1lk7-gg2j-2jj4ij147j00",
+      "nama_game": "Nightmare Manor",
+      "deskripsi": "Survive the night in a haunted house filled with terrors.",
+      "harga": 150000.00,
+      "developer": "HorrorShow",
+      "publisher": "ScaryGames",
+      "tanggal_rilis": "2024-10-31",
+      "gambar": "asset/image_for_dummy/image_10.jpg",
+      "file_path": "downloads/nightmare_manor.zip",
+      "id_genre": "d4e5f678-9012-3456-7890-abcdef123456"
+    },
+    {
+      "id_game": "k0iilj55-5g0j-2ml8-hh3k-3kk5jk258k11",
+      "nama_game": "Space Marine",
+      "deskripsi": "Defend humanity from alien invasions in this intense shooter.",
+      "harga": 350000.00,
+      "developer": "SpaceWar",
+      "publisher": "ActionPack",
+      "tanggal_rilis": "2025-05-15",
+      "gambar": "asset/image_for_dummy/image_2.png",
+      "file_path": "downloads/space_marine.exe",
+      "id_genre": "e5f67890-1234-5678-90ab-cdef12345678"
+    },
+    {
+      "id_game": "l1jjmk66-6h1k-3nm9-ii4l-4ll6kl369l22",
+      "nama_game": "Mind Bender",
+      "deskripsi": "Values your intelligence with complex puzzles.",
+      "harga": 50000.00,
+      "developer": "BrainTease",
+      "publisher": "PuzzleMaster",
+      "tanggal_rilis": "2025-01-10",
+      "gambar": "asset/image_for_dummy/image_3.png",
+      "file_path": "downloads/mind_bender.zip",
+      "id_genre": "f6g7h8i9-0123-4567-890a-bcdef1234567"
+    },
+    {
+      "id_game": "m2kknl77-7i2l-4on0-jj5m-5mm7lm470m33",
+      "nama_game": "Farm Life",
+      "deskripsi": "Relax and build your dream farm.",
+      "harga": 120000.00,
+      "developer": "CozyGames",
+      "publisher": "SimWorld",
+      "tanggal_rilis": "2025-03-20",
+      "gambar": "asset/image_for_dummy/image_7.jpg",
+      "file_path": "downloads/farm_life.zip",
+      "id_genre": "c71f8e55-3d2f-4a0e-9c8b-5e6f7a8b9c0d"
+    }
+  ],
+  "genres": [
+    {
+      "id_genre": "e93db077-1f0e-4c0d-7c8b-5c6d7a8b9c0f",
+      "nama_genre": "Racing"
+    },
+    {
+      "id_genre": "d82abf66-2e1d-4b1f-8d9c-6d7e8b9c0d1e",
+      "nama_genre": "RPG"
+    },
+    {
+      "id_genre": "c71f8e55-3d2f-4a0e-9c8b-5e6f7a8b9c0d",
+      "nama_genre": "Simulation"
+    },
+    {
+      "id_genre": "f04ec188-0a1f-4d9e-6b7a-4b5c6d7e8f9a",
+      "nama_genre": "Action"
+    },
+    {
+      "id_genre": "a1b2c3d4-e5f6-7890-1234-567890abcdef",
+      "nama_genre": "Strategy"
+    },
+    {
+      "id_genre": "b2c3d4e5-f678-9012-3456-7890abcdef12",
+      "nama_genre": "Adventure"
+    },
+    {
+      "id_genre": "c3d4e5f6-7890-1234-5678-90abcdef1234",
+      "nama_genre": "Sports"
+    },
+    {
+      "id_genre": "d4e5f678-9012-3456-7890-abcdef123456",
+      "nama_genre": "Horror"
+    },
+    {
+      "id_genre": "e5f67890-1234-5678-90ab-cdef12345678",
+      "nama_genre": "Shooter"
+    },
+    {
+      "id_genre": "f6g7h8i9-0123-4567-890a-bcdef1234567",
+      "nama_genre": "Puzzle"
+    }
+  ],
+  "invoices": [
+    {
+      "id_invoice": "f15fd299-1b2c-4e8f-9a0b-3c4d5e6f7a8b",
+      "id_user": "u1a2b3c4-d5e6-f7a8-b9c0-d1e2f3a4b5c6",
+      "nomor_invoice": "INV/20260121/001",
+      "tanggal_transaksi": "2026-01-21 10:30:00",
+      "status": "paid",
+      "total_bayar": 90000.00
+    }
+  ],
+  "invoice_items": [
+    {
+      "id_item": "i2b3c4d5-e6f7-a8b9-c0d1-e2f3a4b5c6d7",
+      "id_invoice": "f15fd299-1b2c-4e8f-9a0b-3c4d5e6f7a8b",
+      "id_game": "a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11",
+      "harga_satuan": 90000.00
+    }
+  ],
+  "library": [
+    {
+      "id_library": "l3c4d5e6-f7a8-b9c0-d1e2-f3a4b5c6d7e8",
+      "id_user": "u1a2b3c4-d5e6-f7a8-b9c0-d1e2f3a4b5c6",
+      "id_game": "a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11",
+      "tanggal_beli": "2026-01-21 10:30:00"
+    }
+  ],
+  "users": [
+    {
+      "id_user": "u1a2b3c4-d5e6-f7a8-b9c0-d1e2f3a4b5c6",
+      "username": "johndoe",
+      "email": "john@example.com",
+      "password": "$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi"
+    },
+    {
+      "id_user": "u2b3c4d5-e6f7-a8b9-c0d1-e2f3a4b5c6d7",
+      "username": "janedoe",
+      "email": "jane@example.com",
+      "password": "$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi"
+    }
+  ],
+  "wishlist": [
+    {
+      "id_wishlist": "w4d5e6f7-a8b9-c0d1-e2f3-a4b5c6d7e8f9",
+      "id_user": "u1a2b3c4-d5e6-f7a8-b9c0-d1e2f3a4b5c6",
+      "id_game": "b1ffcd88-8d1c-4fe9-aa5c-5cc8ac491b22"
+    },
+    {
+      "id_wishlist": "w5e6f7a8-b9c0-d1e2-f3a4-b5c6d7e8f9a0",
+      "id_user": "u2b3c4d5-e6f7-a8b9-c0d1-e2f3a4b5c6d7",
+      "id_game": "a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11"
+    }
+  ]
+}

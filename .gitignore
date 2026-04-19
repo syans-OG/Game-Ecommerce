@@ -1,0 +1,7 @@
+PRD_Game_Ecommerce.md
+node_modules/
+.DS_Store
+.vscode/
+dist/
+build/
+.env

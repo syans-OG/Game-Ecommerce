@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Ecommerce Wireframe</title>
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="icon" href="../asset/logo.png" type="image/png">
+    <link rel="stylesheet" href="../css/cart.css">
+    <link rel="stylesheet" href="../css/loader.css">
+</head>
+
+<body>
+
+
+    <nav class="glass-nav">
+        <div class="nav-logo" onclick="window.location.href='index.html'">
+            <img src="../asset/logo.png" alt="Aether Logo" style="height: 48px; width: auto;">
+            <span>Aether</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="catalog.html">Store</a></li>
+            <li><a href="library.html">Library</a></li>
+            <li><a href="index.html#news">News</a></li>
+            <li><a href="#footer">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+
+            <button id="btnMobileMenu" class="nav-btn mobile-menu-btn" aria-label="Menu" style="display: none;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+
+
+            <button class="nav-btn wishlist-btn" aria-label="Wishlist" onclick="window.location.href='wishlist.html'">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path
+                        d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                    </path>
+                </svg>
+            </button>
+
+
+            <button id="btnLogin" class="nav-btn" aria-label="Login">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4" />
+                    <polyline points="10 17 15 12 10 7" />
+                    <line x1="15" y1="12" x2="3" y2="12" />
+                </svg>
+            </button>
+
+
+            <button class="nav-btn cart-btn" aria-label="Cart">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="9" cy="21" r="1" />
+                    <circle cx="20" cy="21" r="1" />
+                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
+                </svg>
+                <span class="badgemart">0</span>
+            </button>
+        </div>
+    </nav>
+
+
+    <section id="hero" class="hero-carousel">
+        <div class="carousel-track" id="heroTrack">
+
+        </div>
+
+
+        <div class="carousel-nav">
+            <button class="prev-btn" aria-label="Previous Slide">&#10094;</button>
+
+            <div class="dots-container" id="heroDots"></div>
+            <button class="next-btn" aria-label="Next Slide">&#10095;</button>
+        </div>
+
+    </section>
+
+
+    <section id="featured">
+        <div class="container featured-layout">
+
+            <div class="featured-text">
+                <span class="tag">COLLECTIONS</span>
+                <h2 class="section-title">Featured<br>Collections</h2>
+                <p class="section-desc">RPG & MMORPG Games, Multiplayer Games, and offline game</p>
+                <button class="btn-shop">SHOP ALL</button>
+            </div>
+
+
+            <div class="featured-carousel-viewport">
+                <div class="featured-track" id="featuredTrack">
+
+                </div>
+
+
+                <div class="featured-nav-controls">
+                    <button id="featPrev" class="nav-control-btn">&#8592;</button>
+                    <button id="featNext" class="nav-control-btn">&#8594;</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="genre">
+
+        <div class="genre-bg">
+            <img alt="Genre Background">
+        </div>
+
+
+        <div class="genre-content">
+            <h2 class="genre-title-left"></h2>
+            <h2 class="genre-title-right"></h2>
+
+            <div class="genre-cta">
+                <button class="btn-view-detail">
+                    <span class="text-default">Learn More</span>
+                    <span class="text-hover">View Detail</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section id="recommended">
+
+        <div class="rec-header">
+            <div class="rec-header-left">
+                <span class="rec-tag">BEST SELLERS</span>
+                <h2 class="rec-title">Recommended for you</h2>
+            </div>
+            <button class="btn-shop-all">SHOP ALL</button>
+        </div>
+
+
+        <div class="rec-carousel-container">
+            <button class="rec-nav-btn rec-prev" id="recPrev">&#8592;</button>
+
+            <div class="rec-carousel-viewport">
+                <div class="rec-track" id="recTrack">
+
+                </div>
+            </div>
+
+            <button class="rec-nav-btn rec-next" id="recNext">&#8594;</button>
+        </div>
+    </section>
+
+    <section id="review">
+
+        <div class="review-bg-overlay"></div>
+
+        <div class="review-container">
+
+            <div class="review-header">
+                <span class="review-tag">REVIEWS</span>
+                <h2 class="review-title">Lorem ipsum dolor sit amet<br>consectetur.</h2>
+            </div>
+
+
+            <div class="review-carousel-wrapper">
+                <div class="review-track" id="reviewTrack">
+
+                    <div class="review-card">
+                        <p class="review-text">
+                            “Lorem ipsum dolor sit amet consectetur. Quam volutpat proin quis turpis fermentum cursus id
+                            ac nunc.”
+                        </p>
+                        <div class="review-meta">
+                            <div class="review-rating">
+                                <span class="rating-val">4.5</span>
+                                <span class="stars">SSSSS</span>
+                            </div>
+                            <h4 class="review-author">Marco B.</h4>
+                            <span class="review-role">Kickstarter Backer</span>
+                        </div>
+                    </div>
+
+                    <div class="review-card">
+                        <p class="review-text">
+                            “Lorem ipsum dolor sit amet consectetur. Enim fermentum mauris faucibus ullamcorper sed
+                            molestie imperdiet magna ipsum.”
+                        </p>
+                        <div class="review-meta">
+                            <div class="review-rating">
+                                <span class="rating-val">4.5</span>
+                                <span class="stars">SSSSS</span>
+                            </div>
+                            <h4 class="review-author">Marco B.</h4>
+                            <span class="review-role">Kickstarter Backer</span>
+                        </div>
+                    </div>
+
+                    <div class="review-card">
+                        <p class="review-text">
+                            “Lorem ipsum dolor sit amet consectetur. Est tellus velit diam id cursus etiam. Enim vel
+                            senectus sagittis pellentesque purus odio duis sit at. Mauris at nibh imperdiet integer
+                            neque ornare blandit interdum massa.”
+                        </p>
+                        <div class="review-meta">
+                            <div class="review-rating">
+                                <span class="rating-val">4.0</span>
+                                <span class="stars">SSSSS</span>
+                            </div>
+                            <h4 class="review-author">Emily</h4>
+                            <span class="review-role">Kickstarter Backer</span>
+                        </div>
+                    </div>
+
+                    <div class="review-card">
+                        <p class="review-text">
+                            “Lorem ipsum dolor sit amet consectetur. Dictum massa mi varius velit risus integer accumsan
+                            arcu. Integer justo tincidunt mauris lobortis.”
+                        </p>
+                        <div class="review-meta">
+                            <div class="review-rating">
+                                <span class="rating-val">4.5</span>
+                                <span class="stars">SSSSS</span>
+                            </div>
+                            <h4 class="review-author">Finnulf</h4>
+                            <span class="review-role">Kickstarter Backer</span>
+                        </div>
+                    </div>
+
+                    <div class="review-card">
+                        <p class="review-text">
+                            “Lorem ipsum dolor sit amet consectetur. Sem integer quis vehicula quisque viverra.”
+                        </p>
+                        <div class="review-meta">
+                            <div class="review-rating">
+                                <span class="rating-val">4.0</span>
+                                <span class="stars">SSSSS</span>
+                            </div>
+                            <h4 class="review-author">Jon M.</h4>
+                            <span class="review-role">Kickstarter Backer</span>
+                        </div>
+                    </div>
+
+                    <div class="review-card">
+                        <p class="review-text">
+                            “Lorem ipsum dolor sit amet consectetur. Sem integer quis vehicula quisque viverra.”
+                        </p>
+                        <div class="review-meta">
+                            <div class="review-rating">
+                                <span class="rating-val">4.0</span>
+                                <span class="stars">SSSSS</span>
+                            </div>
+                            <h4 class="review-author">Jon M.</h4>
+                            <span class="review-role">Kickstarter Backer</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="review-nav">
+                <button id="revPrev" class="rev-nav-btn">&#8592;</button>
+                <button id="revNext" class="rev-nav-btn">&#8594;</button>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section id="news">
+        <div class="news-container">
+
+            <div class="news-column-left">
+                <div class="section-header-small">
+                    <span class="badge-small">LATEST</span>
+                    <h2 class="title-small">News</h2>
+                </div>
+
+
+                <div class="news-card-featured">
+                    <div class="news-image">
+                        <span class="news-tag-overlay">GAMES, NEWS</span>
+                        <img src="../asset/image_for_dummy/image_3.png" alt="News Image">
+                    </div>
+                    <div class="news-content">
+                        <h3 class="news-title">Lorem ipsum dolor sit amet consectetur. Ultrices ut felis ullamcorper
+                            aliquam et donec eget a id.</h3>
+                        <p class="news-excerpt">Lorem ipsum dolor sit amet consectetur. Fringilla sollicitudin sit
+                            viverra venenatis tincidunt ipsum ornare diam.</p>
+                        <div class="news-meta">
+                            <span class="meta-item"><i class="icon-pen"></i> Altair Alan</span>
+                            <span class="meta-item"><i class="icon-clock"></i> 2 min</span>
+                            <button class="btn-circle-white"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="news-column-right">
+                <div class="section-header-small">
+                    <span class="badge-small">LATEST</span>
+                    <h2 class="title-small">Event</h2>
+                </div>
+
+                <div class="kickstarter-list">
+
+                    <div class="ks-card">
+                        <h3 class="ks-title">The Neverling – a 5e one-shot</h3>
+                        <p class="ks-desc">Lorem ipsum dolor sit amet consectetur. Malesuada non vitae sed non odio
+                            justo. Adipiscing semper ullamcorper tortor congue et purus. Hendrerit amet ligula tellus ut
+                            dis.</p>
+                        <div class="ks-footer">
+                            <span class="ks-date"><span class="icon-calendar"></span> Launched on February 20, 2024 at
+                                9:00 am</span>
+                            <button class="btn-circle-white"></button>
+                        </div>
+                    </div>
+
+
+                    <div class="ks-card">
+                        <h3 class="ks-title">A Time Traveler’s Guide to Dinosaur Hunting</h3>
+                        <p class="ks-desc">Lorem ipsum dolor sit amet consectetur. Malesuada non vitae sed non odio
+                            justo. Adipiscing semper ullamcorper tortor congue et purus. Hendrerit amet ligula tellus ut
+                            dis.</p>
+                        <div class="ks-footer">
+                            <span class="ks-date"><span class="icon-calendar"></span> Launched on January 14, 2025 at
+                                9:00 am</span>
+                            <button class="btn-circle-white"></button>
+                        </div>
+                    </div>
+
+
+                    <div class="ks-card">
+                        <h3 class="ks-title">RPG ESSENTIALS: Acrylic Creature Tokens for TTRPGs</h3>
+                        <p class="ks-desc">Lorem ipsum dolor sit amet consectetur. Malesuada non vitae sed non odio
+                            justo. Adipiscing semper ullamcorper tortor congue et purus. Hendrerit amet ligula tellus ut
+                            dis.</p>
+                        <div class="ks-footer">
+                            <span class="ks-date"><span class="icon-calendar"></span> Launched on January 10, 2023 at
+                                9:00 am</span>
+                            <button class="btn-circle-white"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer id="footer">
+
+        <div class="footer-top-edge"></div>
+
+        <div class="footer-container">
+
+            <div class="footer-col footer-brand-col">
+                <p class="footer-text-bold">New releases, updates, con announcements, and more!</p>
+                <h3 class="footer-sub-title">Subscribe For Updates</h3>
+
+                <form class="footer-sub-form">
+                    <input type="email" placeholder="" class="footer-input">
+                    <button type="submit" class="footer-btn-arrow">&#8594;</button>
+                </form>
+
+                <div class="made-by">
+                    <span>Made By <a href="#" class="maker-link">syans</a>.</span>
+                </div>
+            </div>
+
+
+            <div class="footer-col">
+                <h4 class="footer-heading">Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">News</a></li>
+                    <li><a href="#">Shop</a></li>
+                </ul>
+            </div>
+
+
+            <div class="footer-col">
+                <h4 class="footer-heading">Support</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Login</a></li>
+                    <li><a href="#">Sign Up</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+
+
+            <div class="footer-col">
+                <h4 class="footer-heading">Legal</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Return Policy</a></li>
+                    <li><a href="#">Shipping Policy</a></li>
+                    <li><a href="#">Sales Policy</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                </ul>
+            </div>
+        </div>
+
+
+        <button id="backToTop" class="btn-back-to-top" aria-label="Back to Top">
+            &#8593;
+        </button>
+    </footer>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+
+    <script src="../js/auth_config.js"></script>
+    <script src="../js/auth.js"></script>
+    <script src="../js/cart.js"></script>
+    <script src="../js/loader.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+
+</html>
