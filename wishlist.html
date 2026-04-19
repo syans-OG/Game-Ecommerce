@@ -4,13 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Library - GameStore</title>
-    <link rel="icon" href="../asset/logo.png" type="image/png">
-    <link rel="stylesheet" href="../css/responsive.css">
-    <link rel="stylesheet" href="../css/catalog.css">
-    <link rel="stylesheet" href="../css/library.css">
-    <link rel="stylesheet" href="../css/cart.css">
-    <link rel="stylesheet" href="../css/loader.css">
+    <title>My Wishlist - GameStore</title>
+    <link rel="icon" href="asset/logo.png" type="image/png">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/catalog.css">
+    <link rel="stylesheet" href="css/library.css">
+    <link rel="stylesheet" href="css/wishlist.css">
+    <link rel="stylesheet" href="css/cart.css">
+    <link rel="stylesheet" href="css/loader.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,12 +20,12 @@
         rel="stylesheet">
 </head>
 
-<body class="page-library">
+<body class="page-library page-wishlist">
 
 
     <nav class="glass-nav">
         <div class="nav-logo" onclick="window.location.href='index.html'">
-            <img src="../asset/logo.png" alt="Aether Logo" style="height: 48px; width: auto;">
+            <img src="asset/logo.png" alt="Aether Logo" style="height: 48px; width: auto;">
             <span>Aether</span>
         </div>
         <ul class="nav-links">
@@ -82,8 +83,8 @@
     <header class="catalog-hero library-hero">
         <div class="catalog-hero-overlay"></div>
         <div class="catalog-hero-content">
-            <h1 class="catalog-title">MY LIBRARY</h1>
-            <p class="catalog-subtitle">Jump back into your adventures</p>
+            <h1 class="catalog-title">MY WISHLIST</h1>
+            <p class="catalog-subtitle">Save them now, play them later</p>
         </div>
     </header>
 
@@ -96,7 +97,7 @@
 
         <div class="search-sort-bar">
             <div class="search-container">
-                <input type="text" id="searchInput" placeholder="Search your games...">
+                <input type="text" id="searchInput" placeholder="Search your wishlist...">
                 <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <circle cx="11" cy="11" r="8"></circle>
@@ -132,35 +133,28 @@
 
                 <div class="divider-vertical"></div>
 
-
-                <select id="filterStatus" class="sort-dropdown">
-                    <option value="all">All Games</option>
-                    <option value="installed">Installed</option>
-                    <option value="favorites">Favorites</option>
-                </select>
-
                 <select id="sortSelect" class="sort-dropdown">
-                    <option value="recent">Recently Played</option>
+                    <option value="recent">Date Added</option>
+                    <option value="price-asc">Price: Low to High</option>
                     <option value="name-asc">Name: A-Z</option>
-                    <option value="date-purchased">Purchase Date</option>
                 </select>
             </div>
         </div>
 
-        <div class="catalog-split" style="display: block;">
-
+        <div class="catalog-split">
 
             <section class="catalog-content">
 
 
-                <div class="game-grid" id="libraryGrid">
+                <div class="game-grid" id="wishlistGrid">
 
                 </div>
 
-                <div id="libraryEmptyState" class="empty-state" style="display: none;">
-                    <div class="empty-icon">🎮</div>
-                    <h3>No games found</h3>
-                    <p>Try adjusting your search or filters.</p>
+                <div id="wishlistEmptyState" class="empty-state" style="display: none;">
+                    <div class="empty-icon">😹</div>
+                    <h3>No Saved Games Yet</h3>
+                    <p>Your collection is waiting for its next adventure.</p>
+                    <a href="catalog.html" class="empty-state-link">Explore Store</a>
                 </div>
 
             </section>
@@ -233,12 +227,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
 
-    <script src="../js/auth_config.js"></script>
-    <script src="../js/auth.js"></script>
-    <script src="../js/loader.js"></script>
-    <script src="../js/script.js"></script>
-    <script src="../js/cart.js"></script>
-    <script src="../js/library.js"></script>
+    <script src="js/auth_config.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/loader.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/wishlist.js"></script>
 </body>
 
 </html>

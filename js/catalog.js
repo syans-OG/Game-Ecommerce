@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
      * Memuat data game dan genre dari database dummy.
      * Memicu alur render awal dan animasi layout.
      */
-    fetch('../asset/dummy_game_store.json')
+    fetch('asset/dummy_game_store.json')
         .then(response => response.json())
         .then(data => {
             allGames = data.games;
@@ -216,3 +216,4 @@ document.addEventListener('DOMContentLoaded', () => {
         requestAnimationFrame(raf);
     }
 });
+

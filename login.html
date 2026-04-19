@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register - Game Ecommerce</title>
-    <link rel="icon" href="../asset/logo.png" type="image/png">
-    <link rel="stylesheet" href="../css/responsive.css">
-    <link rel="stylesheet" href="../css/loader.css">
-    <link rel="stylesheet" href="../css/auth.css">
+    <title>Login - Game Ecommerce</title>
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="icon" href="asset/logo.png" type="image/png">
+    <link rel="stylesheet" href="css/loader.css">
+    <link rel="stylesheet" href="css/auth.css">
 </head>
 
 <body>
@@ -16,7 +16,7 @@
 
     <nav class="glass-nav">
         <div class="nav-logo" onclick="window.location.href='index.html'">
-            <img src="../asset/logo.png" alt="Aether Logo" style="height: 48px; width: auto;">
+            <img src="asset/logo.png" alt="Aether Logo" style="height: 48px; width: auto;">
             <span>Aether</span>
         </div>
         <ul class="nav-links">
@@ -28,34 +28,30 @@
     <div class="auth-container">
 
         <div class="auth-hero-box">
-            <h1 class="hero-title">Join the Waitlist</h1>
-            <p class="hero-subtitle">Create your account to start your journey.</p>
+            <h1 class="hero-title">Welcome Back</h1>
+            <p class="hero-subtitle">Enter your credentials to access your library.</p>
 
-            <form id="registerForm" class="auth-form">
-
-
-                <div class="hero-input-group">
-                    <input type="text" id="username" class="hero-input" placeholder=" " required>
-                    <label for="username" class="hero-label">Choose Username</label>
-                </div>
+            <form id="loginForm" class="auth-form">
 
 
                 <div class="hero-input-group">
-                    <input type="email" id="email" class="hero-input" placeholder=" " required>
-                    <label for="email" class="hero-label">Email Address</label>
+                    <input type="text" id="identifier" class="hero-input" placeholder=" " required>
+                    <label for="identifier" class="hero-label">Email or Username</label>
                 </div>
 
 
                 <div class="hero-input-group">
                     <input type="password" id="password" class="hero-input" placeholder=" " required>
-                    <label for="password" class="hero-label">Create Password</label>
-                    <div class="input-helper">Min 8 chars, 1 uppercase, 1 number</div>
+                    <label for="password" class="hero-label">Password</label>
                 </div>
 
 
-                <div class="hero-input-group">
-                    <input type="password" id="confirmPassword" class="hero-input" placeholder=" " required>
-                    <label for="confirmPassword" class="hero-label">Confirm Password</label>
+                <div class="form-footer" style="margin-bottom: 20px;">
+                    <label style="display: flex; align-items: center; gap: 8px; cursor: pointer; color: #ccc;">
+                        <input type="checkbox" id="rememberMe" style="accent-color: var(--amber);"> Remember me
+                    </label>
+                    <a href="#" class="hero-link" style="font-size: 0.85rem;"
+                        onclick="alert('Reset link sent (simulation).')">Forgot Password?</a>
                 </div>
 
 
@@ -63,12 +59,12 @@
 
 
                 <button type="submit" id="submitBtn" class="btn-hero-auth">
-                    <span class="btn-text">Start Adventure</span>
+                    <span class="btn-text">Log In</span>
                 </button>
             </form>
 
             <div class="hero-footer">
-                Already have an account? <a href="login.html" class="hero-link">Log In</a>
+                Don't have an account? <a href="register.html" class="hero-link">Join Now</a>
             </div>
         </div>
     </div>
@@ -79,13 +75,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
 
-    <script src="../js/auth_config.js"></script>
-    <script src="../js/loader.js"></script>
-    <script src="../js/auth.js"></script>
-    <script src="../js/bg_spotlight.js"></script>
+    <script src="js/auth_config.js"></script>
+    <script src="js/loader.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/bg_spotlight.js"></script>
     <script>
 
-        const form = document.getElementById('registerForm');
+        const form = document.getElementById('loginForm');
         const submitBtn = document.getElementById('submitBtn');
         const btnText = submitBtn.querySelector('.btn-text');
         const messageBox = document.getElementById('messageBox');
@@ -102,7 +98,7 @@
                 btnText.textContent = text || 'Success';
             } else {
                 btnText.style.opacity = '1';
-                btnText.textContent = text || 'Start Adventure';
+                btnText.textContent = text || 'Log In';
             }
         }
 
@@ -121,40 +117,32 @@
             setButtonState('loading');
 
 
-            const username = document.getElementById('username').value;
-            const email = document.getElementById('email').value;
-            const password = document.getElementById('password').value;
-            const confirmPassword = document.getElementById('confirmPassword').value;
-
-            if (password !== confirmPassword) {
-                setButtonState('error', 'Mismatch');
-                showMessage('error', "Passwords do not match.");
-                setTimeout(() => setButtonState('', 'Start Adventure'), 2000);
-                return;
-            }
-
-
             await new Promise(resolve => setTimeout(resolve, 1500));
 
-            const result = AuthService.register(username, email, password);
+
+            const identifier = document.getElementById('identifier').value;
+            const password = document.getElementById('password').value;
+            const rememberMe = document.getElementById('rememberMe').checked;
+
+            const result = AuthService.login(identifier, password, rememberMe);
 
             if (result.success) {
 
-                setButtonState('success', 'Account Created!');
+                setButtonState('success', 'Welcome Back!');
                 showMessage('success', result.message);
 
 
                 setTimeout(() => {
-                    window.location.href = 'login.html';
-                }, 1500);
+                    window.location.href = 'index.html';
+                }, 1000);
             } else {
 
-                setButtonState('error', 'Error');
+                setButtonState('error', 'Try Again');
                 showMessage('error', result.message);
 
 
                 setTimeout(() => {
-                    setButtonState('', 'Start Adventure');
+                    setButtonState('', 'Log In');
                 }, 2000);
             }
         });

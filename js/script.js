@@ -83,7 +83,7 @@ function initSmoothScroll() {
  */
 async function fetchGameData() {
     try {
-        const response = await fetch('../asset/dummy_game_store.json');
+        const response = await fetch('asset/dummy_game_store.json');
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
@@ -436,7 +436,7 @@ function initGenreRotation(data) {
         const game = data.games.find(g => g.id_genre === genre.id_genre);
         return {
             name: genre.nama_genre,
-            image: game ? '../' + game.gambar : '../asset/image_for_dummy/image_7.jpg'
+            image: game ? '../' + game.gambar : 'asset/image_for_dummy/image_7.jpg'
         };
     });
 
@@ -500,3 +500,4 @@ function initGenreRotation(data) {
         renderGenre(currentIndex);
     }, intervalDuration);
 }
+

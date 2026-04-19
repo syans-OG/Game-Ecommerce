@@ -16,3 +16,4 @@ const AUTH_CONFIG = {
     LOCKOUT_DURATION: 15 * 60 * 1000, // 15 Menit lockout jika gagal login berulang
     TOKEN_EXPIRY: 24 * 60 * 60 * 1000
 };
+

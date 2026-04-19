@@ -4,14 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Wishlist - GameStore</title>
-    <link rel="icon" href="../asset/logo.png" type="image/png">
-    <link rel="stylesheet" href="../css/responsive.css">
-    <link rel="stylesheet" href="../css/catalog.css">
-    <link rel="stylesheet" href="../css/library.css">
-    <link rel="stylesheet" href="../css/wishlist.css">
-    <link rel="stylesheet" href="../css/cart.css">
-    <link rel="stylesheet" href="../css/loader.css">
+    <title>My Profile - GameStore</title>
+
+    <link rel="icon" href="asset/logo.png" type="image/png">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/catalog.css">
+    <link rel="stylesheet" href="css/profile.css">
+
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,12 +19,12 @@
         rel="stylesheet">
 </head>
 
-<body class="page-library page-wishlist">
+<body class="page-catalog">
 
 
     <nav class="glass-nav">
         <div class="nav-logo" onclick="window.location.href='index.html'">
-            <img src="../asset/logo.png" alt="Aether Logo" style="height: 48px; width: auto;">
+            <img src="asset/logo.png" alt="Aether Logo" style="height: 48px; width: auto;">
             <span>Aether</span>
         </div>
         <ul class="nav-links">
@@ -57,12 +56,11 @@
             </button>
 
 
-            <button id="btnLogin" class="nav-btn" aria-label="Login">
+            <button id="btnLogin" class="nav-btn" aria-label="Login" onclick="window.location.href='profile.html'">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4" />
-                    <polyline points="10 17 15 12 10 7" />
-                    <line x1="15" y1="12" x2="3" y2="12" />
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
                 </svg>
             </button>
 
@@ -80,11 +78,11 @@
     </nav>
 
 
-    <header class="catalog-hero library-hero">
+    <header class="catalog-hero profile-hero">
         <div class="catalog-hero-overlay"></div>
         <div class="catalog-hero-content">
-            <h1 class="catalog-title">MY WISHLIST</h1>
-            <p class="catalog-subtitle">Save them now, play them later</p>
+            <h1 class="catalog-title">MY PROFILE</h1>
+            <p class="catalog-subtitle">Manage your account and view your journey</p>
         </div>
     </header>
 
@@ -92,73 +90,97 @@
     <div class="hero-bottom-edge"></div>
 
 
-    <main class="catalog-layout">
+    <main class="profile-layout">
 
 
-        <div class="search-sort-bar">
-            <div class="search-container">
-                <input type="text" id="searchInput" placeholder="Search your wishlist...">
-                <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <circle cx="11" cy="11" r="8"></circle>
-                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                </svg>
-            </div>
-
-            <div class="controls-right">
-
-
-                <div class="view-toggle">
-                    <button class="btn-view active" id="viewGrid" aria-label="Grid View">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <rect x="3" y="3" width="7" height="7"></rect>
-                            <rect x="14" y="3" width="7" height="7"></rect>
-                            <rect x="14" y="14" width="7" height="7"></rect>
-                            <rect x="3" y="14" width="7" height="7"></rect>
-                        </svg>
-                    </button>
-                    <button class="btn-view" id="viewList" aria-label="List View">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <line x1="8" y1="6" x2="21" y2="6"></line>
-                            <line x1="8" y1="12" x2="21" y2="12"></line>
-                            <line x1="8" y1="18" x2="21" y2="18"></line>
-                            <line x1="3" y1="6" x2="3.01" y2="6"></line>
-                            <line x1="3" y1="12" x2="3.01" y2="12"></line>
-                            <line x1="3" y1="18" x2="3.01" y2="18"></line>
-                        </svg>
-                    </button>
-                </div>
-
-                <div class="divider-vertical"></div>
-
-                <select id="sortSelect" class="sort-dropdown">
-                    <option value="recent">Date Added</option>
-                    <option value="price-asc">Price: Low to High</option>
-                    <option value="name-asc">Name: A-Z</option>
-                </select>
+        <div class="user-header">
+            <div class="user-avatar" id="profileAvatar">U</div>
+            <div class="user-info">
+                <h2 id="profileUsername">Loading...</h2>
+                <p id="profileJoinDate">Member since...</p>
             </div>
         </div>
 
-        <div class="catalog-split">
 
-            <section class="catalog-content">
-
-
-                <div class="game-grid" id="wishlistGrid">
-
-                </div>
-
-                <div id="wishlistEmptyState" class="empty-state" style="display: none;">
-                    <div class="empty-icon">😹</div>
-                    <h3>No Saved Games Yet</h3>
-                    <p>Your collection is waiting for its next adventure.</p>
-                    <a href="catalog.html" class="empty-state-link">Explore Store</a>
-                </div>
-
-            </section>
+        <div class="profile-tabs">
+            <button class="tab-btn active" data-tab="tabOverview">Overview</button>
+            <button class="tab-btn" data-tab="tabOrders">Order History</button>
+            <button class="tab-btn" data-tab="tabSettings">Settings</button>
         </div>
+
+
+        <section id="tabOverview" class="tab-content active">
+            <div class="overview-stats">
+
+                <div class="stat-card">
+                    <div class="stat-value" id="statGames">0</div>
+                    <div class="stat-label">Games Owned</div>
+                    <div class="stat-icon">🎮</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-value" id="statHours">0h</div>
+                    <div class="stat-label">Total Playtime</div>
+                    <div class="stat-icon">⏳</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-value" id="statLevel">1</div>
+                    <div class="stat-label">Account Level</div>
+                    <div class="stat-icon">⭐</div>
+                </div>
+            </div>
+
+
+            <div class="recent-activity">
+                <h3>Recent Activity</h3>
+                <p style="color: #ccc;">No recent activity recorded.</p>
+
+            </div>
+        </section>
+
+
+        <section id="tabOrders" class="tab-content">
+            <div class="orders-list" id="ordersList">
+
+            </div>
+        </section>
+
+
+        <section id="tabSettings" class="tab-content">
+            <div class="settings-container">
+                <form id="settingsForm">
+                    <div class="settings-group">
+                        <h3>Public Profile</h3>
+                        <div class="form-group">
+                            <label for="inputUsername">Username</label>
+                            <input type="text" id="inputUsername" class="form-input" placeholder="Your username">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputBio">Bio</label>
+                            <textarea id="inputBio" class="form-input" rows="3"
+                                placeholder="Tell us about yourself"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="settings-group">
+                        <h3>Account Security</h3>
+                        <div class="form-group">
+                            <label for="inputEmail">Email Address</label>
+                            <input type="email" id="inputEmail" class="form-input" placeholder="name@example.com"
+                                disabled style="opacity: 0.7; cursor: not-allowed;">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputPassword">New Password</label>
+                            <input type="password" id="inputPassword" class="form-input"
+                                placeholder="Leave blank to keep current">
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-save">Save Changes</button>
+                </form>
+            </div>
+        </section>
 
     </main>
 
@@ -224,15 +246,10 @@
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
-
-    <script src="../js/auth_config.js"></script>
-    <script src="../js/auth.js"></script>
-    <script src="../js/loader.js"></script>
-    <script src="../js/script.js"></script>
-    <script src="../js/cart.js"></script>
-    <script src="../js/wishlist.js"></script>
+    <script src="js/auth_config.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/profile.js"></script>
 </body>
 
 </html>

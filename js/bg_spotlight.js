@@ -13,13 +13,13 @@ const SpotlightEffect = {
     gridSize: 180, // Ukuran grid gambar latar
 
     images: [
-        '../asset/image_for_dummy/image_1.jpg',
-        '../asset/image_for_dummy/image_2.png',
-        '../asset/image_for_dummy/image_3.png',
-        '../asset/image_for_dummy/image_4.jpg',
-        '../asset/image_for_dummy/image_5.jpg',
-        '../asset/image_for_dummy/image_6.jpg',
-        '../asset/image_for_dummy/image_7.jpg'
+        'asset/image_for_dummy/image_1.jpg',
+        'asset/image_for_dummy/image_2.png',
+        'asset/image_for_dummy/image_3.png',
+        'asset/image_for_dummy/image_4.jpg',
+        'asset/image_for_dummy/image_5.jpg',
+        'asset/image_for_dummy/image_6.jpg',
+        'asset/image_for_dummy/image_7.jpg'
     ],
 
     init: function () {
@@ -176,3 +176,4 @@ const SpotlightEffect = {
 document.addEventListener('DOMContentLoaded', () => {
     SpotlightEffect.init();
 });
+

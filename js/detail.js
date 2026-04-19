@@ -25,7 +25,7 @@ async function initDetailApp() {
     }
 
     try {
-        const response = await fetch('../asset/dummy_game_store.json');
+        const response = await fetch('asset/dummy_game_store.json');
         const data = await response.json();
         globalGameData = data;
 
@@ -77,7 +77,7 @@ function renderGameDetails(game, data) {
     // Render Galeri Thumbnail
     const galleryThumbs = document.getElementById('galleryThumbs');
     if (galleryThumbs) {
-        const dummyImgs = ['../' + game.gambar, '../asset/image_for_dummy/image_1.jpg', '../asset/image_for_dummy/image_2.png'];
+        const dummyImgs = ['../' + game.gambar, 'asset/image_for_dummy/image_1.jpg', 'asset/image_for_dummy/image_2.png'];
         galleryThumbs.innerHTML = dummyImgs.map((src, idx) => `
             <div class="thumb-item ${idx === 0 ? 'active' : ''}" onclick="changeMainImage('${src}', this)">
                 <img src="${src}" alt="Thumb">
@@ -199,3 +199,4 @@ function initSimilarCarousel() {
     next.onclick = () => { index = (index + 1) > (track.children.length - visible) ? 0 : index + 1; track.style.transform = `translateX(${-index * cardWidth}px)`; };
     prev.onclick = () => { index = (index - 1) < 0 ? (track.children.length - visible) : index - 1; track.style.transform = `translateX(${-index * cardWidth}px)`; };
 }
+

@@ -35,7 +35,7 @@ class Loader {
             <div id="${this.loaderId}">
                 <div class="loader-content">
                     <div class="loader-logo">
-                        <img src="../asset/logo.png" alt="Loading...">
+                        <img src="asset/logo.png" alt="Loading...">
                     </div>
                     <div class="loader-bar-container">
                         <div class="loader-bar"></div>
@@ -109,3 +109,4 @@ const appLoader = new Loader();
 
 // Expose ke global window untuk akses manual jika perlu
 window.appLoader = appLoader;
+

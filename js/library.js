@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
      * Memuat data games dan mensimulasikan status 'Owned' untuk 8 game pertama.
      * Integrasi: Mengambil metadata (gambar, judul) dari master JSON.
      */
-    fetch('../asset/dummy_game_store.json')
+    fetch('asset/dummy_game_store.json')
         .then(res => res.json())
         .then(data => {
             myGames = data.games.slice(0, 8).map(game => ({
@@ -131,3 +131,4 @@ document.addEventListener('DOMContentLoaded', () => {
     sortSelect.addEventListener('change', renderLibrary);
     filterStatusSelect.addEventListener('change', renderLibrary);
 });
+

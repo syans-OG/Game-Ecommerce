@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     /**
      * Load data master game sebagai referensi detail info produk.
      */
-    fetch('../asset/dummy_game_store.json')
+    fetch('asset/dummy_game_store.json')
         .then(res => res.json())
         .then(data => {
             allGames = data.games;
@@ -179,3 +179,4 @@ document.addEventListener('DOMContentLoaded', () => {
     searchInput.addEventListener('input', renderWishlist);
     sortSelect.addEventListener('change', renderWishlist);
 });
+

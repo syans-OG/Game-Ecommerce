@@ -4,20 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shopping Cart - Game Store</title>
-    <link rel="icon" href="../asset/logo.png" type="image/png">
-    <link rel="stylesheet" href="../css/responsive.css">
-    <link rel="stylesheet" href="../css/home.css">
-    <link rel="stylesheet" href="../css/cart.css">
-    <link rel="stylesheet" href="../css/loader.css">
+    <title>My Library - GameStore</title>
+    <link rel="icon" href="asset/logo.png" type="image/png">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/catalog.css">
+    <link rel="stylesheet" href="css/library.css">
+    <link rel="stylesheet" href="css/cart.css">
+    <link rel="stylesheet" href="css/loader.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&family=Montserrat:wght@400;500;600&display=swap"
+        rel="stylesheet">
 </head>
 
-<body>
+<body class="page-library">
 
 
     <nav class="glass-nav">
         <div class="nav-logo" onclick="window.location.href='index.html'">
-            <img src="../asset/logo.png" alt="Aether Logo" style="height: 48px; width: auto;">
+            <img src="asset/logo.png" alt="Aether Logo" style="height: 48px; width: auto;">
             <span>Aether</span>
         </div>
         <ul class="nav-links">
@@ -72,48 +79,93 @@
     </nav>
 
 
-    <main style="min-height: 80vh;">
-        <div class="cart-page-header">
-            <h1>Your Shopping Cart</h1>
-            <p style="color: #aaa; margin-top: 10px;">Review your selection before checkout</p>
+    <header class="catalog-hero library-hero">
+        <div class="catalog-hero-overlay"></div>
+        <div class="catalog-hero-content">
+            <h1 class="catalog-title">MY LIBRARY</h1>
+            <p class="catalog-subtitle">Jump back into your adventures</p>
         </div>
+    </header>
 
-        <div class="cart-table-container">
-            <table class="cart-table">
-                <thead>
-                    <tr>
-                        <th style="width: 50%;">Product</th>
-                        <th style="width: 15%;">Price</th>
-                        <th style="width: 15%;">Quantity</th>
-                        <th style="width: 15%;">Total</th>
-                        <th style="width: 5%;"></th>
-                    </tr>
-                </thead>
-                <tbody id="full-cart-container">
 
-                </tbody>
-            </table>
-        </div>
+    <div class="hero-bottom-edge"></div>
 
-        <div class="cart-summary-section">
-            <div class="cart-summary">
-                <div class="summary-row">
-                    <span>Subtotal</span>
-                    <span id="summary-subtotal">Rp 0</span>
+
+    <main class="catalog-layout">
+
+
+        <div class="search-sort-bar">
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search your games...">
+                <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+            </div>
+
+            <div class="controls-right">
+
+
+                <div class="view-toggle">
+                    <button class="btn-view active" id="viewGrid" aria-label="Grid View">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="3" width="7" height="7"></rect>
+                            <rect x="14" y="3" width="7" height="7"></rect>
+                            <rect x="14" y="14" width="7" height="7"></rect>
+                            <rect x="3" y="14" width="7" height="7"></rect>
+                        </svg>
+                    </button>
+                    <button class="btn-view" id="viewList" aria-label="List View">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="8" y1="6" x2="21" y2="6"></line>
+                            <line x1="8" y1="12" x2="21" y2="12"></line>
+                            <line x1="8" y1="18" x2="21" y2="18"></line>
+                            <line x1="3" y1="6" x2="3.01" y2="6"></line>
+                            <line x1="3" y1="12" x2="3.01" y2="12"></line>
+                            <line x1="3" y1="18" x2="3.01" y2="18"></line>
+                        </svg>
+                    </button>
                 </div>
-                <div class="summary-row">
-                    <span>Tax</span>
-                    <span>Calculated at checkout</span>
-                </div>
-                <div class="summary-row total">
-                    <span>Total</span>
-                    <span id="summary-total">Rp 0</span>
-                </div>
-                <button class="btn-primary full-width" onclick="window.location.href='checkout.html'">PROCEED
-                    TO CHECKOUT</button>
-                <a href="catalog.html" class="view-cart-link">Continue Shopping</a>
+
+                <div class="divider-vertical"></div>
+
+
+                <select id="filterStatus" class="sort-dropdown">
+                    <option value="all">All Games</option>
+                    <option value="installed">Installed</option>
+                    <option value="favorites">Favorites</option>
+                </select>
+
+                <select id="sortSelect" class="sort-dropdown">
+                    <option value="recent">Recently Played</option>
+                    <option value="name-asc">Name: A-Z</option>
+                    <option value="date-purchased">Purchase Date</option>
+                </select>
             </div>
         </div>
+
+        <div class="catalog-split" style="display: block;">
+
+
+            <section class="catalog-content">
+
+
+                <div class="game-grid" id="libraryGrid">
+
+                </div>
+
+                <div id="libraryEmptyState" class="empty-state" style="display: none;">
+                    <div class="empty-icon">🎮</div>
+                    <h3>No games found</h3>
+                    <p>Try adjusting your search or filters.</p>
+                </div>
+
+            </section>
+        </div>
+
     </main>
 
 
@@ -177,24 +229,16 @@
     </footer>
 
 
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
 
-    <script src="../js/auth_config.js"></script>
-    <script src="../js/auth.js"></script>
-    <script src="../js/loader.js"></script>
-    <script src="../js/script.js"></script>
-    <script src="../js/cart.js"></script>
-    <script>
-
-
-        document.addEventListener('DOMContentLoaded', () => {
-
-            if (window.cartUI) window.cartUI.updateUI();
-        });
-    </script>
+    <script src="js/auth_config.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/loader.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/library.js"></script>
 </body>
 
 </html>

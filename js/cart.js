@@ -268,3 +268,4 @@ window.cartUI = cartUI;
 document.addEventListener('DOMContentLoaded', () => {
     cartUI.init();
 });
+
