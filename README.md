@@ -1,4 +1,4 @@
-# 🎮 GameVault: Premium Digital Game Marketplace
+# GameVault: Premium Digital Game Marketplace
 
 GameVault is a premium digital game e-commerce platform designed to provide gamers with a seamless discovery, purchase, and management experience. From indie gems to triple-A blockbusters, GameVault is the ultimate hub for modern gaming.
 
@@ -40,4 +40,4 @@ GameVault is a premium digital game e-commerce platform designed to provide game
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
-*Built with ❤️ for Gamers.*
+* syans *
